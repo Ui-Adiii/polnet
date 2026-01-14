@@ -9,8 +9,7 @@ const Footer = () => {
         {/* Top Section */}
         <div className="grid gap-10 md:grid-cols-4">
 
-          {/* Brand */}
-         {/* Brand */}
+
 <div>
   <div className="h-24 w-24 flex items-center justify-center bg-white rounded-full">
     <img src="/logo.png" className="w-full h-full object-cover" alt="" />
