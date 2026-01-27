@@ -1,144 +1,60 @@
-import { Link } from "react-router-dom";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaYoutube,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaEnvelope,
-} from "react-icons/fa";
-import Logo from "./Logo";
-
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Top Section */}
-        <div className="grid gap-10 md:grid-cols-4">
-          <div>
-            <Logo />
+    <footer className="relative bg-black text-white py-12 overflow-hidden">
+      
+      {/* Top subtle divider */}
+      <div className="absolute top-0 left-0 w-full h-px bg-white/10" />
 
-            <p className="mt-4 text-sm leading-relaxed">
-              AL-Wataniya International School provides holistic education in an
-              Islamic environment, following CBSE pattern with strong focus on
-              values, discipline, and academics.
-            </p>
+      <div className="relative max-w-6xl mx-auto px-6 flex flex-col items-center gap-6">
 
-            {/* Leadership */}
-            <div className="mt-4 text-sm text-gray-400 space-y-1">
-              <p>
-                <span className="text-white font-medium">Director:</span> Abdul
-                Kadir
-              </p>
-              <p>
-                <span className="text-white font-medium">Principal:</span> Md
-                Zeeshan Hasmi
-              </p>
-            </div>
-          </div>
+        {/* Copyright */}
+        <p className="text-sm text-white/80">
+          © 2026 Polnet. All rights reserved.
+        </p>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link to="/" className="hover:text-yellow-400">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-yellow-400">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="hover:text-yellow-400">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-yellow-400">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/enquire" className="hover:text-yellow-400">
-                  Enquire
-                </Link>
-              </li>
-            </ul>
-          </div>
+        {/* Social Icons */}
+        <div className="flex gap-4">
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2">
-                <FaMapMarkerAlt />
-                Millat Colony, Kanke, Ranchi – 834006
-              </li>
-              <li className="flex items-center gap-2">
-                <FaPhoneAlt />
-                <a href="tel:9279809145" className="hover:text-yellow-400">
-                  9279809145
-                </a>
-                ,&nbsp;
-                <a href="tel:6201543640" className="hover:text-yellow-400">
-                  6201543640
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaEnvelope />
-                info@alwataniya.edu
-              </li>
-            </ul>
-          </div>
+          {/* Telegram */}
+          <a
+            href="#"
+            className="w-12 h-12 flex items-center justify-center
+            rounded-xl bg-white/10 border border-white/10
+            hover:bg-white/20 transition"
+          >
+            <img src="https://polnet.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftelegram.5d47a123.webp&w=384&q=75" alt="Telegram" className="w-full h-full object-cover" />
+          </a>
 
-          {/* Working Hours */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">School Hours</h3>
-            <p className="text-sm">
-              For any queries <br />
-              09:00 AM – 02:00 PM
-            </p>
+          {/* X / Twitter */}
+          <a
+            href="#"
+            className="w-12 h-12 flex items-center justify-center
+            rounded-xl bg-white/10 border border-white/10
+            hover:bg-white/20 transition"
+          >
+            <img src="https://polnet.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftwitter.748e5d89.webp&w=384&q=75" alt="X" className="w-full h-full object-cover" />
+          </a>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-4 text-lg">
-              <a
-                href="https://www.instagram.com/al_wataniya_school"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-pink-400"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://www.facebook.com/AlWataniyaSchool"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://www.youtube.com/@AlWataniyaSchool"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-red-400"
-              >
-                <FaYoutube />
-              </a>
-            </div>
-          </div>
-        </div>
+          {/* YouTube */}
+          <a
+            href="#"
+            className="w-12 h-12 flex items-center justify-center
+            rounded-xl bg-white/10 border border-white/10
+            hover:bg-white/20 transition"
+          >
+            <img src="https://polnet.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyoutube.59377f9a.webp&w=384&q=75" alt="YouTube" className="w-full h-full object-cover" />
+          </a>
 
-        {/* Divider */}
-        <div className="border-t border-slate-700 my-8"></div>
+          {/* Instagram */}
+          <a
+            href="#"
+            className="w-12 h-12 flex items-center justify-center
+            rounded-xl bg-white/10 border border-white/10
+            hover:bg-white/20 transition"
+          >
+            <img  src="https://polnet.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstagram.62e5ec94.webp&w=384&q=75" alt="Instagram" className="w-full h-full object-cover" />
+          </a>
 
-        {/* Bottom */}
-        <div className="text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} AL-Wataniya International School. All
-          rights reserved.
         </div>
       </div>
     </footer>

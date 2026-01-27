@@ -1,83 +1,87 @@
-import { Link } from "react-router-dom";
-import {
-  FaBullseye,
-  FaEye,
-  FaAward,
-  FaUsers,
-  FaArrowRight,
-} from "react-icons/fa";
-import Heading from "../components/Heading";
-import MisionVisionCard from "../components/MisionVisionCard";
+import PhaseCard from "../components/PhaseCard";
 
-const About = () => {
+const AboutPolnet = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
-      <Heading title={"About AL-Wataniya"} subtitle={" Holistic Education in an Islamic Environment"} />
-    
+    <section className="relative bg-black text-white py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
 
-      {/* About Content */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 space-y-6 text-lg leading-relaxed">
-  <p>
-    <span className="font-semibold text-green-600">
-      AL-Wataniya International School
-    </span>{" "}
-    is a CBSE-pattern, English-medium institution dedicated to nurturing
-    young minds through quality education, moral values, and Islamic
-    teachings.
-  </p>
+        {/* LEFT : ROADMAP PHASES */}
+        <div className="relative grid grid-cols-2 gap-10">
 
-  <p>
-    We believe education is not only about academics, but also about
-    discipline, character building, and overall personality development
-    in a safe, caring, and value-based environment.
-  </p>
+          {/* Phase 1 */}
+          <div className="rotate-[-6deg]">
+            <PhaseCard
+              phase="Phase 1"
+              title="Token Launch"
+              points={[
+                "Token Genesis & Smart Contract Deployment",
+              ]}
+            />
+          </div>
 
-  {/* Leadership */}
-  <div className="pt-6 border-t border-gray-200">
-    <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-      School Leadership
-    </h3>
+          {/* Phase 2 */}
+          <div className="translate-y-12 rotate-[4deg]">
+            <PhaseCard
+              phase="Phase 2"
+              title="Web3 Launch"
+              points={[
+                "Ecosystem Launch & Web DApp Activation",
+              ]}
+            />
+          </div>
 
-    <p>
-      <span className="font-semibold text-gray-900">
-        Abdul Kadir
-      </span>{" "}
-      — Director, Senior Research Scholar cum Assistant Professor at
-      Ranchi University, Ranchi.
-    </p>
+          {/* Phase 3 */}
+          <div className="-translate-y-4 rotate-[5deg]">
+            <PhaseCard
+              phase="Phase 3"
+              title="Smart DAO"
+              points={[
+                "Governance DAO & AI Infrastructure Upgrade",
+              ]}
+            />
+          </div>
 
-    <p>
-      <span className="font-semibold text-gray-900">
-        Md Zeeshan Hasmi
-      </span>{" "}
-      — Principal, Research Scholar at Vinoba Bhave University.
-    </p>
-  </div>
-</div>
+          {/* Phase 4 */}
+          <div className="translate-y-16 rotate-[-4deg]">
+            <PhaseCard
+              phase="Phase 4"
+              title="Smart Chain"
+              points={[
+                "Cross-Chain Expansion & AI Predictive Finance Tools",
+              ]}
+            />
+          </div>
 
-      </section>
+        </div>
 
-      {/* Mission & Vision */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Mission & Vision
+        {/* RIGHT : ABOUT CONTENT */}
+        <div>
+          <h2 className="text-4xl font-semibold mb-6">
+            About <span className="text-purple-300">Polnet AI</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <MisionVisionCard title={'Our Mission'} Icon={FaBullseye} description={'To provide holistic education combining academics, values,'} />
-            <MisionVisionCard title={'Our Vision'} Icon={FaEye} description={'To shape responsible, confident, and value-driven citizens.'} />
-            <MisionVisionCard title={'Excellence'} Icon={FaAward} description={'High academic standards with continuous improvement.'} />
-            <MisionVisionCard title={'Community'} Icon={FaUsers} description={'Growth, care, and success together.'} />
-          </div>
+          <p className="text-white/70 leading-relaxed mb-6">
+            Polnet AI is a next-generation decentralized ecosystem that merges
+            artificial intelligence with the power of blockchain technology to
+            create a new model of financial intelligence.
+          </p>
+
+          <p className="text-white/70 leading-relaxed mb-6">
+            Built on the Polygon network, Polnet AI enables an ecosystem where
+            data-driven automation, transparency, and decentralized governance
+            work together seamlessly — empowering users to make smarter, faster,
+            and more secure digital decisions.
+          </p>
+
+          <p className="text-white/70 leading-relaxed">
+            At Polnet AI, intelligence isn’t just artificial — it’s decentralized,
+            adaptive, and designed for your growth.
+          </p>
         </div>
-      </section>
 
-     
-
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default About;
+export default AboutPolnet;

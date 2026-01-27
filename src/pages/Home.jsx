@@ -1,18 +1,21 @@
 import React from 'react'
 import Hero from './Hero'
-import Features from './Feature'
-import About from './About'
-import Contact from './Contact'
-import GalleryPhoto from './GalleryPhotos'
+
+import WhyAIBlockchain from './WhyAIBlockchain '
+import AboutPolnet from './About'
+import WhyChoosePolnet from './WhyChoosePolnet '
+import VisionEcosystem from './VisionEcosystem '
+import JoinMovement from './JoinMovement'
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Features />
-      <GalleryPhoto heading={true} />
-      <About />
-      <Contact />
+      <WhyAIBlockchain />
+      <AboutPolnet />
+      <WhyChoosePolnet />
+      <VisionEcosystem />
+      <JoinMovement />
     </>
   )
 }

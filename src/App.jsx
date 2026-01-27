@@ -1,6 +1,7 @@
 import { ReactLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
 import AppRoute from "./routes/app.route";
+import Bg from "./components/Bg";
 
 const App = () => {
   const lenisRef = useRef(null);
@@ -22,6 +23,7 @@ const App = () => {
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <AppRoute />
+      <Bg />
     </>
   );
 };
