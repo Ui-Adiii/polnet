@@ -3,11 +3,11 @@ const Navbar = () => {
     <nav className="relative z-20  border  border-white/10 bg-black backdrop-blur-xl">
       <div className="flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex justify-center w-16 h-16  md:w-20 md:h-20 items-center">
           <img
-            src="https://polnet.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogotxt.0511a99e.webp&w=640&q=75"
-            alt="Polnet"
-            className="h-9 md:h-10"
+            src="logo.png"
+            alt="ChainX"
+            className="w-full h-full object-contain rounded-full shadow-[0_0_25px_rgba(99,102,241,0.45)]"
           />
         </div>
 

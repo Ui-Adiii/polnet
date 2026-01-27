@@ -48,7 +48,7 @@ const JoinMovement = () => {
 
           <p className="text-white/60 leading-relaxed max-w-md mb-10">
             Whether you’re a visionary, developer, or believer in intelligent
-            decentralization — Polnet AI gives you the power to shape the future.
+            decentralization — ChainX gives you the power to shape the future.
           </p>
 
           {/* CTA */}
@@ -67,14 +67,14 @@ const JoinMovement = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
           <FAQCard
-            title="What is Polnet AI?"
-            desc="Polnet AI is a decentralized ecosystem that combines Artificial Intelligence with blockchain automation to create an intelligent financial infrastructure."
+            title="What is ChainX?"
+            desc="ChainX is a decentralized ecosystem that combines Artificial Intelligence with blockchain automation to create an intelligent financial infrastructure."
             rotate="-rotate-6"
           />
 
           <FAQCard
             title="What is the POL token?"
-            desc="POL is the native utility token of Polnet AI, enabling governance, ecosystem transactions, and community participation."
+            desc="POL is the native utility token of ChainX, enabling governance, ecosystem transactions, and community participation."
             rotate="rotate-3"
           />
 
@@ -85,8 +85,8 @@ const JoinMovement = () => {
           />
 
           <FAQCard
-            title="Which blockchain does Polnet AI run on?"
-            desc="Polnet AI is built on the Polygon blockchain, ensuring scalability, security, and cost efficiency."
+            title="Which blockchain does ChainX run on?"
+            desc="ChainX is built on the Polygon blockchain, ensuring scalability, security, and cost efficiency."
             rotate="-rotate-4"
           />
 

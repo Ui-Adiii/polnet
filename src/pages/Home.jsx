@@ -2,18 +2,18 @@ import React from 'react'
 import Hero from './Hero'
 
 import WhyAIBlockchain from './WhyAIBlockchain '
-import AboutPolnet from './About'
-import WhyChoosePolnet from './WhyChoosePolnet '
+import AboutChainX from './About'
 import VisionEcosystem from './VisionEcosystem '
 import JoinMovement from './JoinMovement'
+import RobotWatcher from './RobotWatcher'
 
 const Home = () => {
   return (
     <>
       <Hero />
       <WhyAIBlockchain />
-      <AboutPolnet />
-      <WhyChoosePolnet />
+      <RobotWatcher />
+      <AboutChainX />
       <VisionEcosystem />
       <JoinMovement />
     </>

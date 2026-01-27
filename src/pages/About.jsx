@@ -1,91 +1,96 @@
 import PhaseCard from "../components/PhaseCard";
 
-const AboutPolnet = () => {
+const AboutChainX = () => {
   return (
-    <section className="relative bg-black text-white py-32 overflow-hidden">
+    <section className="relative bg-black text-white py-24 sm:py-32 overflow-hidden">
 
-      {/* Ambient gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#7c3aed_0%,transparent_45%)] opacity-20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#4f46e5_0%,transparent_45%)] opacity-20" />
+      {/* Ambient glows */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-purple-500/20 blur-[140px]" />
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-indigo-500/20 blur-[140px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-        {/* LEFT : ROADMAP PHASES */}
-        <div className="relative grid grid-cols-2 gap-12">
-
-          {/* Phase 1 */}
-          <div className="rotate-[-6deg] hover:rotate-[-4deg] transition">
-            <PhaseCard
-              phase="Phase 1"
-              title="Token Launch"
-              points={[
-                "Token Genesis & Smart Contract Deployment",
-              ]}
-            />
-          </div>
-
-          {/* Phase 2 */}
-          <div className="translate-y-14 rotate-[4deg] hover:rotate-[2deg] transition">
-            <PhaseCard
-              phase="Phase 2"
-              title="Web3 Launch"
-              points={[
-                "Ecosystem Launch & Web DApp Activation",
-              ]}
-            />
-          </div>
-
-          {/* Phase 3 */}
-          <div className="-translate-y-6 rotate-[5deg] hover:rotate-[3deg] transition">
-            <PhaseCard
-              phase="Phase 3"
-              title="Smart DAO"
-              points={[
-                "Governance DAO & AI Infrastructure Upgrade",
-              ]}
-            />
-          </div>
-
-          {/* Phase 4 */}
-          <div className="translate-y-20 rotate-[-4deg] hover:rotate-[-2deg] transition">
-            <PhaseCard
-              phase="Phase 4"
-              title="Smart Chain"
-              points={[
-                "Cross-Chain Expansion & AI Predictive Finance Tools",
-              ]}
-            />
-          </div>
-
-          {/* Subtle connector glow */}
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-1/2 top-10 h-[80%] w-px bg-gradient-to-b from-transparent via-purple-400/30 to-transparent" />
-          </div>
-        </div>
-
-        {/* RIGHT : ABOUT CONTENT */}
-        <div>
-          <h2 className="text-4xl font-semibold mb-6">
-            About <span className="text-purple-300">Polnet AI</span>
+        {/* RIGHT : ABOUT CONTENT (FIRST ON MOBILE) */}
+        <div className="order-1 lg:order-2 animate-fadeUp text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
+            About{" "}
+            <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">
+              ChainX
+            </span>
           </h2>
 
           <p className="text-white/70 leading-relaxed mb-6">
-            Polnet AI is a next-generation decentralized ecosystem that merges
+            ChainX is a next-generation decentralized ecosystem that merges
             artificial intelligence with the power of blockchain technology to
             create a new model of financial intelligence.
           </p>
 
           <p className="text-white/70 leading-relaxed mb-6">
-            Built on the Polygon network, Polnet AI enables an ecosystem where
+            Built on the Polygon network, ChainX enables an ecosystem where
             data-driven automation, transparency, and decentralized governance
             work together seamlessly — empowering users to make smarter, faster,
             and more secure digital decisions.
           </p>
 
           <p className="text-white/70 leading-relaxed">
-            At Polnet AI, intelligence isn’t just artificial — it’s decentralized,
+            At{" "}
+            <span className="text-purple-300 font-medium">
+              ChainX
+            </span>
+            , intelligence isn’t just artificial — it’s decentralized,
             adaptive, and designed for your growth.
           </p>
+
+          {/* Divider */}
+          <div className="mt-10 mx-auto lg:mx-0 h-px w-24 sm:w-32 bg-gradient-to-r from-purple-400 to-indigo-400" />
+        </div>
+
+        {/* LEFT : ROADMAP PHASES (SECOND ON MOBILE) */}
+        <div className="relative order-2 lg:order-1">
+
+          {/* Glass background panel (desktop only) */}
+          <div className="absolute inset-0 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hidden sm:block" />
+
+          {/* Phase grid */}
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 p-4 sm:p-8">
+
+            <div className="sm:rotate-[-6deg] sm:animate-floatSlow">
+              <PhaseCard
+                phase="Phase 1"
+                title="Token Launch"
+                points={["Token Genesis & Smart Contract Deployment"]}
+              />
+            </div>
+
+            <div className="sm:translate-y-12 sm:rotate-[4deg] sm:animate-float">
+              <PhaseCard
+                phase="Phase 2"
+                title="Web3 Launch"
+                points={["Ecosystem Launch & Web DApp Activation"]}
+              />
+            </div>
+
+            <div className="sm:-translate-y-4 sm:rotate-[5deg] sm:animate-float">
+              <PhaseCard
+                phase="Phase 3"
+                title="Smart DAO"
+                points={["Governance DAO & AI Infrastructure Upgrade"]}
+              />
+            </div>
+
+            <div className="sm:translate-y-16 sm:rotate-[-4deg] sm:animate-floatSlow">
+              <PhaseCard
+                phase="Phase 4"
+                title="Smart Chain"
+                points={["Cross-Chain Expansion & AI Predictive Finance Tools"]}
+              />
+            </div>
+
+          </div>
+
+          {/* Accent dots (desktop only) */}
+          <span className="hidden sm:block absolute -top-3 -left-3 w-3 h-3 rounded-full bg-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.9)]" />
+          <span className="hidden sm:block absolute -bottom-3 -right-3 w-3 h-3 rounded-full bg-indigo-400 shadow-[0_0_15px_rgba(99,102,241,0.9)]" />
         </div>
 
       </div>
@@ -93,4 +98,4 @@ const AboutPolnet = () => {
   );
 };
 
-export default AboutPolnet;
+export default AboutChainX;

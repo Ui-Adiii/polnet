@@ -16,3 +16,222 @@
 body {
   font-family: "Wolff1", sans-serif;
 }
+#star-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-star {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    #7db3ff 0%,
+    #c72978 35%,
+    #1975e5 55%,
+    #7a4cff 75%,
+    #5a0f3f 100%
+  );
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+
+  /* Stronger neon glow */
+  filter: drop-shadow(0 0 12px #60a5fa) drop-shadow(0 0 24px #ec4899)
+    drop-shadow(0 0 36px rgba(236, 72, 153, 0.7));
+
+  animation: star-float 0.9s ease-out forwards;
+}
+
+@keyframes star-float {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--x), var(--y)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Scanner line glow */
+.scanner-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168,85,247,0.95),
+    rgba(236,72,153,0.95),
+    rgba(168,85,247,0.95),
+    transparent
+  );
+  box-shadow:
+    0 0 12px rgba(168,85,247,0.9),
+    0 0 30px rgba(236,72,153,0.8),
+    0 0 60px rgba(168,85,247,0.5);
+  animation: scannerMove 4s ease-in-out infinite;
+}
+
+/* Bottom → Top → Bottom */
+@keyframes scannerMove {
+  0% { top: 100%; }
+  50% { top: 0%; }
+  100% { top: 100%; }
+}
+
+/* Inner edge glow */
+.inner-glow {
+  box-shadow:
+    inset 0 0 30px rgba(168,85,247,0.35),
+    inset 0 0 60px rgba(236,72,153,0.15);
+}
+
+/* Corner HUD glow */
+.corner-glow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(168,85,247,0.8);
+  box-shadow: 0 0 16px rgba(168,85,247,0.8);
+  z-index: 45;
+}
+
+.corner-glow.top-left {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-glow.top-right {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-glow.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.corner-glow.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+.robot-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 50;
+}
+
+.robot-head {
+  width: 140px;
+  height: 100px;
+  background: linear-gradient(145deg, #0f0f1b, #1c1c2d);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.35),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.robot-eye {
+  width: 34px;
+  height: 34px;
+  background: #050508;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.1);
+}
+
+.robot-pupil {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #60a5fa, #c72978);
+  border-radius: 50%;
+  transition: transform 0.08s ease-out;
+  box-shadow:
+    0 0 10px rgba(96,165,250,0.9),
+    0 0 18px rgba(199,41,120,0.8);
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22px); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-floatSlow {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes scanDot {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  50% { top: 100%; opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 0%; opacity: 0; }
+}
+
+.animate-scanDot {
+  animation: scanDot 3.5s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+.animate-spinSlow {
+  animation: spinSlow 30s linear infinite;
+}
