@@ -3,13 +3,18 @@ import PhaseCard from "../components/PhaseCard";
 const AboutPolnet = () => {
   return (
     <section className="relative bg-black text-white py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+
+      {/* Ambient gradients */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#7c3aed_0%,transparent_45%)] opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#4f46e5_0%,transparent_45%)] opacity-20" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
 
         {/* LEFT : ROADMAP PHASES */}
-        <div className="relative grid grid-cols-2 gap-10">
+        <div className="relative grid grid-cols-2 gap-12">
 
           {/* Phase 1 */}
-          <div className="rotate-[-6deg]">
+          <div className="rotate-[-6deg] hover:rotate-[-4deg] transition">
             <PhaseCard
               phase="Phase 1"
               title="Token Launch"
@@ -20,7 +25,7 @@ const AboutPolnet = () => {
           </div>
 
           {/* Phase 2 */}
-          <div className="translate-y-12 rotate-[4deg]">
+          <div className="translate-y-14 rotate-[4deg] hover:rotate-[2deg] transition">
             <PhaseCard
               phase="Phase 2"
               title="Web3 Launch"
@@ -31,7 +36,7 @@ const AboutPolnet = () => {
           </div>
 
           {/* Phase 3 */}
-          <div className="-translate-y-4 rotate-[5deg]">
+          <div className="-translate-y-6 rotate-[5deg] hover:rotate-[3deg] transition">
             <PhaseCard
               phase="Phase 3"
               title="Smart DAO"
@@ -42,7 +47,7 @@ const AboutPolnet = () => {
           </div>
 
           {/* Phase 4 */}
-          <div className="translate-y-16 rotate-[-4deg]">
+          <div className="translate-y-20 rotate-[-4deg] hover:rotate-[-2deg] transition">
             <PhaseCard
               phase="Phase 4"
               title="Smart Chain"
@@ -52,6 +57,10 @@ const AboutPolnet = () => {
             />
           </div>
 
+          {/* Subtle connector glow */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-1/2 top-10 h-[80%] w-px bg-gradient-to-b from-transparent via-purple-400/30 to-transparent" />
+          </div>
         </div>
 
         {/* RIGHT : ABOUT CONTENT */}

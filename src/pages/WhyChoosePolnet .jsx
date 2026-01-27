@@ -4,10 +4,14 @@ const WhyChoosePolnet = () => {
   return (
     <section className="relative bg-black text-white py-28 overflow-hidden">
 
-      {/* Decorative border corners */}
-      <div className="absolute inset-0 border border-white/5 rounded-[32px]" />
+      {/* Soft framed edges */}
+      <div className="pointer-events-none absolute inset-0 rounded-[32px] border border-white/10" />
+      <div className="pointer-events-none absolute inset-0 rounded-[32px] shadow-[inset_0_0_80px_rgba(0,0,0,0.9)]" />
 
-      <div className="relative max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-24 items-center">
+      {/* Ambient glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,#7c3aed_0%,transparent_40%)] opacity-15" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-24 items-center">
 
         {/* LEFT CONTENT */}
         <div>
@@ -59,31 +63,37 @@ const WhyChoosePolnet = () => {
         </div>
 
         {/* RIGHT FEATURE CARDS */}
-        <div className="relative flex gap-10 justify-end">
+        <div className="relative flex gap-12 justify-end">
 
-          {/* Smart */}
-          <FeatureCard
-            color="bg-sky-400"
-            title="Smart"
-            subtitle="Precision"
-            rotate="-rotate-6"
-          />
+          {/* Vertical glow guide */}
+          <div className="pointer-events-none absolute right-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
 
-          {/* Secure */}
-          <FeatureCard
-            color="bg-emerald-400"
-            title="Secure"
-            subtitle="Ownership"
-            rotate="rotate-3"
-          />
+          <div className="hover:-translate-y-2 transition duration-300">
+            <FeatureCard
+              color="bg-sky-400"
+              title="Smart"
+              subtitle="Precision"
+              rotate="-rotate-6"
+            />
+          </div>
 
-          {/* Fast */}
-          <FeatureCard
-            color="bg-orange-400"
-            title="Fast"
-            subtitle="Vision"
-            rotate="rotate-6"
-          />
+          <div className="translate-y-10 hover:-translate-y-2 transition duration-300">
+            <FeatureCard
+              color="bg-emerald-400"
+              title="Secure"
+              subtitle="Ownership"
+              rotate="rotate-3"
+            />
+          </div>
+
+          <div className="hover:-translate-y-2 transition duration-300">
+            <FeatureCard
+              color="bg-orange-400"
+              title="Fast"
+              subtitle="Vision"
+              rotate="rotate-6"
+            />
+          </div>
         </div>
 
       </div>

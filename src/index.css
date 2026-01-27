@@ -1,1 +1,18 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Wolff1";
+  src: url("/fonts/second.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wolff2";
+  src: url("/fonts/first.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Wolff1", sans-serif;
+}
