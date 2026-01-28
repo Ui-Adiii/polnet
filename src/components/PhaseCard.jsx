@@ -42,14 +42,15 @@ const PhaseCard = ({ phase, title, points }) => {
       />
 
       {/* Phase */}
-      <p className="text-xs tracking-widest uppercase text-purple-300 mb-2">
+      <p className="text-lg tracking-widest md:text-xl font-bold uppercase text-purple-300 mb-2">
         {phase}
       </p>
 
       {/* Title */}
       <h3
         className="
-          text-lg font-semibold
+        text-md
+          md:text-lg font-semibold
           bg-gradient-to-r from-purple-300 via-indigo-300 to-purple-300
           bg-clip-text text-transparent
         "

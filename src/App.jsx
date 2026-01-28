@@ -1,7 +1,6 @@
 import { ReactLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
 import AppRoute from "./routes/app.route";
-import Bg from "./components/Bg";
 import CursorStarTrail from "./components/CursorStarTrail";
 
 const App = () => {
@@ -25,7 +24,6 @@ const App = () => {
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <AppRoute />
        <CursorStarTrail />
-      <Bg />
     </>
   );
 };

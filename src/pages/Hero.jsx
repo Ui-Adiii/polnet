@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden text-white">
+    <section className="hero relative min-h-screen  bg-black overflow-hidden text-white">
 
       {/* Ambient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,#6366f1_0%,transparent_55%)] opacity-30" />

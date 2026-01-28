@@ -2,6 +2,7 @@ const FAQCard = ({ title, desc, rotate }) => {
   return (
     <div
       className={`
+        font-Wolff1
         relative bg-white/5 border border-white/10
         backdrop-blur-xl rounded-2xl p-6
         ${rotate}
@@ -9,13 +10,9 @@ const FAQCard = ({ title, desc, rotate }) => {
         hover:rotate-0 transition duration-300
       `}
     >
-      <h3 className="text-lg font-semibold text-purple-300 mb-3">
-        {title}
-      </h3>
+      <h3 className="text-lg font-semibold text-purple-300 mb-3">{title}</h3>
 
-      <p className="text-sm text-white/60 leading-relaxed">
-        {desc}
-      </p>
+      <p className="text-sm text-white/60 leading-relaxed">{desc}</p>
 
       {/* Speech notch */}
       <span
@@ -30,12 +27,28 @@ const FAQCard = ({ title, desc, rotate }) => {
   );
 };
 
-
 const JoinMovement = () => {
   return (
     <section className="relative bg-black text-white py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-24 items-center">
+      {/* 🧠 Data flow beams */}
+      <div className="data-beams">
+        <span className="beam beam-1" />
+        <span className="beam beam-2" />
+        <span className="beam beam-3" />
+      </div>
 
+      {/* 🧩 HUD corners */}
+      <div className="hud-frame">
+        <span className="hud tl" />
+        <span className="hud tr" />
+        <span className="hud bl" />
+        <span className="hud br" />
+      </div>
+
+      {/* 🌊 Signal wave */}
+      <div className="signal-wave" />
+
+      <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-24 items-center">
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-4xl font-semibold text-purple-300 mb-6">
@@ -52,12 +65,14 @@ const JoinMovement = () => {
           </p>
 
           {/* CTA */}
-          <button className="
+          <button
+            className="
             group inline-flex items-center gap-3
             rounded-full border border-purple-400/40
             px-7 py-3 text-sm font-medium
             hover:bg-purple-500/10 transition
-          ">
+          "
+          >
             Join Community
             <span className="group-hover:translate-x-1 transition">↗</span>
           </button>
@@ -65,7 +80,6 @@ const JoinMovement = () => {
 
         {/* RIGHT FAQ CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-
           <FAQCard
             title="What is ChainX?"
             desc="ChainX is a decentralized ecosystem that combines Artificial Intelligence with blockchain automation to create an intelligent financial infrastructure."
@@ -89,7 +103,6 @@ const JoinMovement = () => {
             desc="ChainX is built on the Polygon blockchain, ensuring scalability, security, and cost efficiency."
             rotate="-rotate-4"
           />
-
         </div>
       </div>
     </section>
